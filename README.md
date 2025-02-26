@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Testing React with React Testing Library and Jest
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create React App
 
 ## Available Scripts
 
@@ -18,6 +18,11 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+
+- `npm run test` to run all tests
+
+- `npm test -- AnyTestSuiteYouWant.test.js` to run specific test
 
 ### `npm run build`
 
