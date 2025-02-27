@@ -1,7 +1,7 @@
-export const calculaNovoSaldo = (valores, saldo) => {
-  if (valores.transacao === "Depósito") {
-    return saldo - parseInt(valores.valor);
+export const calculateNewBalance = (transaction, balance) => {
+  if (transaction.transaction === "Depósito") {
+    return balance + parseInt(transaction.value);
   } else {
-    return saldo + parseInt(valores.valor);
+    return balance - parseInt(transaction.value);
   }
 };

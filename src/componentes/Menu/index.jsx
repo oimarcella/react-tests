@@ -1,7 +1,7 @@
 import React from 'react';
-import estilos from './Menu.module.css';
+import styles from './Menu.module.css';
 
-const listaMenu = [
+const menuList = [
   'Início',
   'Transferências',
   'Investimentos',
@@ -10,15 +10,15 @@ const listaMenu = [
 
 export default function Menu() {
   return (
-    <nav className={estilos.menu}>
-      {listaMenu.map((item, indice) => {
+    <nav className={styles.menu}>
+      {menuList.map((item, index) => {
         return (
-          <div key={item} className={estilos.item}>
-            <a href="/" className={estilos.link}>
+          <div key={item} className={styles.item}>
+            <a href="/" className={styles.link}>
               {item}
             </a>
-            {indice !== listaMenu.length - 1 && (
-              <div className={estilos.divisor} />
+            {index !== menuList.length - 1 && (
+              <div className={styles.divisor} />
             )}
           </div>
         );

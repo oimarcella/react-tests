@@ -1,14 +1,14 @@
 import React from "react";
-import estilos from "./Cabecalho.module.css";
+import styles from "./Header.module.css";
 import { ReactComponent as Logo } from "./bytebank.svg";
 import avatarUsuario from "./avatar.svg";
 
-export default function Cabecalho() {
+export default function Header() {
   return (
-    <header className={estilos.cabecalho}>
-      <div className={estilos.container}>
+    <header className={styles.cabecalho}>
+      <div className={styles.container}>
         <Logo />
-        <div className={estilos.usuario}>
+        <div className={styles.usuario}>
           <p>Joana Fonseca Gomes</p>
           <img src={avatarUsuario} alt="Ícone de um avatar de usuário" />
         </div>

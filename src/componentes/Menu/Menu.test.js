@@ -1,25 +1,25 @@
 import {render, screen} from "@testing-library/react";
 import Menu from "./index";
 
-test("Deve renderizar um link para página inicial", ()=>{
+test("Should render link to homepage", ()=>{
     render(<Menu/>);
     const linkToHome = screen.getByText("Início");
     expect(linkToHome).toBeInTheDocument();
 });
 
-test("Deve renderizar lista de 4 links do menu", ()=>{
+test("Should render list of 4 link in menu", ()=>{
     render(<Menu/>);
     const listLink = screen.getAllByRole("link");
     expect(listLink).toHaveLength(4);
 });
 
-test("Não deve renderizar link para extrato", ()=>{
+test("Shouldn't render link to extract", ()=>{
     render(<Menu/>);
-    const linkExtrato = screen.queryByText("Extrato");
-    expect(linkExtrato).not.toBeInTheDocument();
+    const extractLink = screen.queryByText("Extrato");
+    expect(extractLink).not.toBeInTheDocument();
 });
 
-test("Deve renderizar uma lista de links com a classe .link", ()=>{
+test("Should render list of links with class .link", ()=>{
     render(<Menu/>);
     const links = screen.getAllByRole("link");
     links.forEach(link=> expect(link).toHaveClass("link"));

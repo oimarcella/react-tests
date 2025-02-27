@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import  Extrato from './index';
+import  Extract from './index';
 
-describe("Extrato", ()=>{
-    test("Deve renderizar uma lista de transações", ()=>{
+describe("Extract", ()=>{
+    test("Should render list of transactions", ()=>{
         const transactions = [
             {
                 transacao:'Depósito',
@@ -10,7 +10,7 @@ describe("Extrato", ()=>{
             }
         ];
         
-        render(<Extrato transacoes={transactions}/>);
+        render(<Extract transactions={transactions}/>);
         const list = screen.getByRole('listitem');
         expect(list).toBeInTheDocument();
     });
