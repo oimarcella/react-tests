@@ -11,7 +11,7 @@ export default function Balance({ balance }) {
       </div>
       <div className={styles.divisor} />
       <p className={styles.conta}>Conta corrente</p>
-      <p className={styles.valor}>{`R$ ${balance}`}</p>
+      <p className={styles.valor} data-testid="saldo">{`R$ ${balance.toFixed(2)}`.replace('.',',')}</p>
     </div>
   );
 }

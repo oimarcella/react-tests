@@ -22,12 +22,12 @@ describe("Form",  ()=>{
     });
     test("Should submit a new transaction when user clicks Realizar Transferência", ()=>{
         //mocking function
-        const submitTransaction = jest.fn();
+        const submitTransactionMock = jest.fn();
 
-        render(<Form submitTransaction={submitTransaction}/>);
+        render(<Form submitTransaction={submitTransactionMock}/>);
         const button = screen.getByRole("button");
         userEvent.click(button);
-        expect(submitTransaction).toHaveBeenCalledTimes(1);
+        expect(submitTransactionMock).toHaveBeenCalledTimes(1);
     });
     test("Is able to select a deposit and transfer option",()=>{
         render(<Form />);
