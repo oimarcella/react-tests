@@ -2,6 +2,7 @@
 
 These were the tests applied in this frontend project.
 They test visual issues, and also calculation functions ensuring correct return.
+
 ![13 tests passed](image-tests.png)
 
 ## Available Scripts
