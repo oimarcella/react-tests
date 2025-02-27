@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Transactions({ transaction, styles }) {
-  console.log("===>",transaction)
   return (
     <li>
       <p className={styles.mes}>{transaction.month}</p>

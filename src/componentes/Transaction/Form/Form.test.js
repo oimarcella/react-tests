@@ -29,4 +29,12 @@ describe("Form",  ()=>{
         userEvent.click(button);
         expect(submitTransaction).toHaveBeenCalledTimes(1);
     });
+    test("Is able to select a deposit and transfer option",()=>{
+        render(<Form />);
+        const select = screen.getByTestId("select-opcoes");
+        userEvent.selectOptions(select, "Depósito");
+        expect(select).toHaveValue("Depósito");
+        userEvent.selectOptions(select, "Transferência");
+        expect(select).toHaveValue("Transferência");
+    });
 });
